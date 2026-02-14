@@ -133,16 +133,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202602131817004_initload.cs" />
-    <Compile Include="Migrations\202602131817004_initload.Designer.cs">
-      <DependentUpon>202602131817004_initload.cs</DependentUpon>
+    <Compile Include="Migrations\202602140949207_initload.cs" />
+    <Compile Include="Migrations\202602140949207_initload.Designer.cs">
+      <DependentUpon>202602140949207_initload.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202602131823295_adddepdsgtoModels.cs" />
-    <Compile Include="Migrations\202602131823295_adddepdsgtoModels.Designer.cs">
-      <DependentUpon>202602131823295_adddepdsgtoModels.cs</DependentUpon>
+    <Compile Include="Migrations\202602141148593_AddDsgDeptoModel.cs" />
+    <Compile Include="Migrations\202602141148593_AddDsgDeptoModel.Designer.cs">
+      <DependentUpon>202602141148593_AddDsgDeptoModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\department.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Designation.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,11 +198,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Department\" />
-    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -232,11 +232,11 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202602131817004_initload.resx">
-      <DependentUpon>202602131817004_initload.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202602140949207_initload.resx">
+      <DependentUpon>202602140949207_initload.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202602131823295_adddepdsgtoModels.resx">
-      <DependentUpon>202602131823295_adddepdsgtoModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202602141148593_AddDsgDeptoModel.resx">
+      <DependentUpon>202602141148593_AddDsgDeptoModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

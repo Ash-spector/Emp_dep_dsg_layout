@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Emp_dep_desg_layout.Models
 {
-    public class department
+    public class Department
     {
         public int id { get; set; }
         [Required(ErrorMessage="Enter Department name")]

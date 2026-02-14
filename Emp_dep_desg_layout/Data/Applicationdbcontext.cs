@@ -9,7 +9,7 @@ namespace Emp_dep_desg_layout.Data
         {
         }
 
-        public DbSet<department> Departments { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public DbSet<Designation> Designations { get; set; }
         public DbSet<Employee> Employees { get; set; }
     }

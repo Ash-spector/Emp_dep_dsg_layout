@@ -7,13 +7,13 @@ namespace Emp_dep_desg_layout.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class adddepdsgtoModels : IMigrationMetadata
+    public sealed partial class AddDsgDeptoModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(adddepdsgtoModels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddDsgDeptoModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202602131823295_adddepdsgtoModels"; }
+            get { return "202602141148593_AddDsgDeptoModel"; }
         }
         
         string IMigrationMetadata.Source

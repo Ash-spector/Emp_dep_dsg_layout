@@ -12,10 +12,12 @@ namespace Emp_dep_desg_layout.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
+        [Required(ErrorMessage ="Address dal")]
+        public string Address { get; set; }
         public int Salary { get; set; }
         public int DepartmentId { get; set; }
         [ForeignKey("DepartmentId")]
-        public department Department { get; set; }
+        public Department Department { get; set; }
         //agr foreign key ka name aur property name same h to foreign key attribute ki zarurat nhi hoti
         //or agr same name nhi h to foreign key attribute lagana zaruri h
         public int DesignationId { get; set; }

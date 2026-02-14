@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Emp_dep_desg_layout.Models.Employee>
+    <h2 class=" text-bg-white text-center text-primary">Employee List</h2>
+
+@Html.ActionLink("New Employee", "Upsert", "Employee", new { @class = "btn btn-info" })
+@if (!Model.Any())
+            {
+                <p class=" text-danger">Data Not Found</p>
+                
+            }
+else
+            {
+
+
+<table class="table-active table-borderless table-striped-columns">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var employee in Model)
+                {
+                    <tr>
+                        <td>@employee.Name</td>
+                        <td>@employee.Address</td>
+                        <td>@employee.Salary</td>
+                        <td>@employee.Department</td>
+                        <td>@employee.Designation</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Upsert", new { id = employee.Id }, new { @class = "btn btn-success" });
+                            @Html.ActionLink("Details","Detail",new {id = employee.Id}, new { @class = "btn btn-info"})
+                        </td>
+
+                    </tr>
+                }
+
+
+                    </tbody>
+                </table>
+            }
+

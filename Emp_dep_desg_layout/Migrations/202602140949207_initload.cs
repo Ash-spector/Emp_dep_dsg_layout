@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class adddepdsgtoModels : DbMigration
+    public partial class initload : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.departments",
+                "dbo.Departments",
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
@@ -36,7 +36,7 @@
                         DesignationId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.departments", t => t.DepartmentId, cascadeDelete: true)
+                .ForeignKey("dbo.Departments", t => t.DepartmentId, cascadeDelete: true)
                 .ForeignKey("dbo.Designations", t => t.DesignationId, cascadeDelete: true)
                 .Index(t => t.DepartmentId)
                 .Index(t => t.DesignationId);
@@ -46,12 +46,12 @@
         public override void Down()
         {
             DropForeignKey("dbo.Employees", "DesignationId", "dbo.Designations");
-            DropForeignKey("dbo.Employees", "DepartmentId", "dbo.departments");
+            DropForeignKey("dbo.Employees", "DepartmentId", "dbo.Departments");
             DropIndex("dbo.Employees", new[] { "DesignationId" });
             DropIndex("dbo.Employees", new[] { "DepartmentId" });
             DropTable("dbo.Employees");
             DropTable("dbo.Designations");
-            DropTable("dbo.departments");
+            DropTable("dbo.Departments");
         }
     }
 }
