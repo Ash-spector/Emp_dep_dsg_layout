@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202602141148593_AddDsgDeptoModel.Designer.cs">
       <DependentUpon>202602141148593_AddDsgDeptoModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602160727174_Name.cs" />
+    <Compile Include="Migrations\202602160727174_Name.Designer.cs">
+      <DependentUpon>202602160727174_Name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Designation.cs" />
@@ -199,6 +203,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Upsert.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202602141148593_AddDsgDeptoModel.resx">
       <DependentUpon>202602141148593_AddDsgDeptoModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602160727174_Name.resx">
+      <DependentUpon>202602160727174_Name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
