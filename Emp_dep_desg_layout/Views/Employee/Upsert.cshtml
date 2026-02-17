@@ -1,4 +1,8 @@
 ﻿@model Emp_dep_desg_layout.Models.Employee
+    @{ 
+        Layout = "~/Views/Shared/_Layout-pulse.cshtml";
+    }
+
 @{
     var title = Model.Id != 0 ? "Edit Employee" : "New Employee";
     var saveUpdate = Model.Id != 0 ? "Update" : "Save";

@@ -1,4 +1,8 @@
 ﻿@model IEnumerable<Emp_dep_desg_layout.Models.Employee>
+    @{ 
+        Layout = "~/Views/Shared/_Layout-slate.cshtml";
+    }
+
 <h2 class=" text-bg-white text-center text-primary">Employee List</h2>
 
 @Html.ActionLink("New Employee", "Upsert", "Employee", new { @class = "btn btn-info" })
