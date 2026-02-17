@@ -72,6 +72,24 @@ namespace Emp_dep_desg_layout.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Details(int id)
+        {
+            var employeeInDb = context.Employees
+                .Include(e => e.Department)
+                .Include(e => e.Designation)
+                .FirstOrDefault(e => e.Id == id);
+            if (employeeInDb == null) return HttpNotFound();
+            return View(employeeInDb);
+        }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var employeeInDb = context.Employees.Find(id);
+            if (employeeInDb == null) return HttpNotFound();
+            context.Employees.Remove(employeeInDb);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
 

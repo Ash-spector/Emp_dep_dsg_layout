@@ -26,21 +26,26 @@ else
         <tbody>
             @foreach (var employee in Model)
             {
-                <tr>
-                    <td>@employee.Name</td>
-                    <td>@employee.Address</td>
-                    <td>@employee.Salary</td>
-                    <td>@employee.Department.name</td>
-                    <td>@employee.Designation.Name</td>
-                    <td>
-                        @Html.ActionLink("Edit", "Upsert", new { id = employee.Id }, new { @class = "btn btn-success" })
-                        @Html.ActionLink("Details", "Detail", new { id = employee.Id }, new { @class = "btn btn-info" })
-                        @Html.ActionLink("Delete", "Delete", new { id = employee.Id }, new { @class = "btn btn-danger" })
-                    </td>
-                </tr>
+                using (Html.BeginForm("Delete", "Employee", new { id = employee.Id }))
+                {
+                    <tr>
+                        <td>@employee.Name</td>
+                        <td>@employee.Address</td>
+                        <td>@employee.Salary</td>
+                        <td>@employee.Department.name</td>
+                        <td>@employee.Designation.Name</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Upsert", new { id = employee.Id }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Details", "Details", new { id = employee.Id }, new { @class = "btn btn-info" })
+                            @*@Html.ActionLink("Delete", "Delete", new { id = employee.Id }, new { @class = "btn btn-danger" })*@
+                            <input type="submit" class=" btn btn-danger" value=" Delete" onclick="return confirm('Want to Delete Data ?')"/>
+                        </td>
+                    </tr>
+                }
             }
 
         </tbody>
     </table>
 }
+
 

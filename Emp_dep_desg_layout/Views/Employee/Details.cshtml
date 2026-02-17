@@ -1,0 +1,26 @@
+﻿
+@model Emp_dep_desg_layout.Models.Employee
+<h2 class="text-primary text-center">Employee Details</h2>
+
+<table class="table table-bordered table-striped" style="padding:15px;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Address</td>
+            <td>@Model.Salary</td>
+            <td>@Model.Department.name</td>
+            <td>@Model.Designation.Name</td>
+        </tr>
+    </tbody>
+</table>
+@Html.ActionLink("Edit", "Upsert", new { id = Model.Id }, new { @class = "btn btn-success" })
+@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
